@@ -380,7 +380,7 @@ bool ZLeadscrewKinematics::DoAutoCalibration(size_t numFactors, const RandomProb
 			}
 			else
 			{
-				reprap.GetMove().AdjustLeadscrews(solution);
+				reprap.GetMove().AdjustLeadscrews(solution);  // TODO: This is where the correction matrix defined by solution is applied.
 				for (size_t i = 0; i < numLeadscrews; ++i)
 				{
 					lastCorrections[i] = solution[i];
